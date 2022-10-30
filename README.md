@@ -65,17 +65,20 @@ Exploit 3: Privilege Escalation
   This exploit will show privilege escalation on WPDistillery.vm
   
   1. Using user enumeration as previously shown, the attacker can use leverage this skill by finding a user available for attack.
-  2. Once the user is able to log in using an authenticated user, the attacker can now attempt to escalate the privilege by opening a        reverse shell.
+  2. Once the user is able to log in using an authenticated user, the attacker can now attempt to escalate the privilege by opening a reverse shell.
   3. This can be done by using 404.php template on WordPress and inserting a reverse shell implementation php.
-      ![image](https://user-images.githubusercontent.com/111927957/198873488-db0d3e67-f8bd-49fc-af98-b69be130547a.png)
+      ![image](https://user-images.githubusercontent.com/111927957/198873488-db0d3e67-f8bd-49fc-af98-b69be130547a.png).
       
-  4. Make sure to change the IP and Port configuration on the reverse shell php to the correct IP and listening Port so          NetCat can listen to the specified port and access the shell.
+  4. The reverse shell php file can be found in usr/share/webshells
+    ![image](https://imgur.com/MiJ6IKF.gif)
+      
+  5. Make sure to change the IP and Port configuration on the reverse shell php to the correct IP and listening Port so          NetCat can listen to the specified port and access the shell.
   
-  5. Use the following command to listen on the specified port:
+  6. Use the following command to listen on the specified port:
      - nc -lvp 443
    
-  6. If successful, the user should be inside the console.
-  7. This can be confirmed by using whoami command in the console. 
+  7. If successful, the user should be inside the console.
+  8. This can be confirmed by using whoami command in the console. 
 
 
 
