@@ -58,7 +58,19 @@ In this exploit, I launched a user enumeration attack on WPDistillery.vm
 
 ![image](https://user-images.githubusercontent.com/111927957/198875062-37c59997-b311-4f63-a008-697fabf3d330.png)
 
-  6. Use a URL shortener to deliver send this attack as an email or even a comment that the user would read/click on.
+  6. Use a URL shortener to deliver and send this attack as an email or even a comment that the user would read/click on.
+
+Exploit 3: Privilege Escalation
+
+  This exploit will show privilege escalation on WPDistillery.vm
+  
+  1. Using user enumeration as previously shown, the attacker can use leverage this skill by finding a user available for attack.
+  2. Once the user is able to log in using an authenticated user, the attacker can now attempt to escalate the privilege by opening a        reverse shell.
+  3. This can be done by using 404.php template on WordPress and inserting a reverse shell implementation php.
+      ![image](https://user-images.githubusercontent.com/111927957/198873488-db0d3e67-f8bd-49fc-af98-b69be130547a.png)
+      
+  4. Make sure to change the IP and Port configuration on the reverse shell php to the correct IP and listening Port so          NetCat can listen to the specified port and access the shell.
+
 
 
 
