@@ -58,6 +58,10 @@ In this exploit, I launched a user enumeration attack on WPDistillery.vm
 
 ![image](https://user-images.githubusercontent.com/111927957/198875062-37c59997-b311-4f63-a008-697fabf3d330.png)
 
-  
+  6. Use a URL shortener to deliver send this attack as an email or even a comment that the user would read/click on.
+
+
+
+
   
 
