@@ -36,5 +36,15 @@ In this exploit, I launched a user enumeration attack on WPDistillery.vm
 
   Now we are able to log in as admin and access the website.
   
+  Exploit 2: Privilege Escalation
+  
+  This exploit will show privilege escalation on WPDistillery.vm
+  
+  1. Using user enumeration as previously shown, the attacker can use leverage this skill by finding a user available for attack.
+  2. Once the user is able to log in using an authenticated user, the attacker can now attempt to escalate the privilege by opening a        reverse shell.
+  3. This can be done by using 404.php template on WordPress.
+      ![image](https://user-images.githubusercontent.com/111927957/198873488-db0d3e67-f8bd-49fc-af98-b69be130547a.png)
+
+  
   
 
