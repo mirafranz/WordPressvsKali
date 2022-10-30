@@ -34,5 +34,7 @@ In this exploit, I launched a user enumeration attack on WPDistillery.vm
   
   Results of the wpscan shows that user "admin" has the password "admin".
 
+  Now we are able to log in as admin and access the website.
+  
   
 
