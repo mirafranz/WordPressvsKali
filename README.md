@@ -67,7 +67,7 @@ Exploit 3: Privilege Escalation
   1. Using user enumeration as previously shown, the attacker can use leverage this skill by finding a user available for attack.
   2. Once the user is able to log in using an authenticated user, the attacker can now attempt to escalate the privilege by opening a reverse shell.
   3. This can be done by using 404.php template on WordPress and inserting a reverse shell implementation php.
-      ![image](https://user-images.githubusercontent.com/111927957/198873488-db0d3e67-f8bd-49fc-af98-b69be130547a.png).
+      ![image](https://imgur.com/VtOM9as.gif)
       
   4. The reverse shell php file can be found in usr/share/webshells
     ![image](https://imgur.com/MiJ6IKF.gif)
