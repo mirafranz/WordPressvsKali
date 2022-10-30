@@ -17,6 +17,22 @@ In this exploit, I launched a user enumeration attack on WPDistillery.vm
   
   The enumeration scan identified "admin" as an available user.
   
-  This can be demonstrated by attempting to login as Admin on wpdistillery.vm/wp-login.php
+  This can be checked by attempting to login as Admin on wpdistillery.vm/wp-login.php
   
   ![image](https://user-images.githubusercontent.com/111927957/198867726-35f6a92c-34ed-4111-be9f-97624dd0da9b.png)
+  
+  The results show that "The password you entered for the username admin is incorrect". This proves that admin is a user on this website. 
+  
+  Next, I will bruteforce into admin using wpscan.
+  
+  1. Continuing on the same terminal, insert the command: 
+    - sudo wpscan --url http://wpdistillery.vm/wp-login.php -U 'admin' -P fasttrack.txt
+    - Note: I'm using fasttrack.txt wordlist to bruteforce into admin.
+  ![image](https://user-images.githubusercontent.com/111927957/198867852-f8efa7d9-37e8-4bf9-aee1-a6349979a3dc.png)
+  
+  ![image](https://user-images.githubusercontent.com/111927957/198867860-d9372c27-a756-4ffc-9b8a-43e7f6f55b2d.png)
+  
+  Results of the wpscan shows that user "admin" has the password "admin".
+
+  
+
