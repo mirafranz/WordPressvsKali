@@ -36,14 +36,21 @@ In this exploit, I launched a user enumeration attack on WPDistillery.vm
 
   Now we are able to log in as admin and access the website.
   
-  Exploit 2: Privilege Escalation
+  Exploit 2: XSS
   
-  This exploit will show privilege escalation on WPDistillery.vm
+  In this exploit, I will show a method to launch a XSS attack. 
   
-  1. Using user enumeration as previously shown, the attacker can use leverage this skill by finding a user available for attack.
-  2. Once the user is able to log in using an authenticated user, the attacker can now attempt to escalate the privilege by opening a        reverse shell.
-  3. This can be done by using 404.php template on WordPress.
-      ![image](https://user-images.githubusercontent.com/111927957/198873488-db0d3e67-f8bd-49fc-af98-b69be130547a.png)
+  1. As admin, add this script as a new post in the text tab then publish:
+     - <script>eval(window.location.hash.substring(1))</script>
+     - This makes the website vulnerable to XSS
+     - To confirm that it works, go back to the mainpage wpdistillery.vm then add /#alert(1)
+     - An alert box should pop up, showing (1)
+     ![image](https://user-images.githubusercontent.com/111927957/198874401-26b38a41-6bc0-444d-a1bb-e3b1a6b4c81b.png)
+     
+   2.
+
+
+
 
   
   
